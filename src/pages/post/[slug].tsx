@@ -42,7 +42,7 @@ export default function Post({ post }: PostProps) {
   }
 
 
-  const totalWords = post.data.content.reduce((total, contentItem) => {
+  const countWords = post.data.content.reduce((total, contentItem) => {
     total += contentItem.heading.split(' ').length;
 
     const words = contentItem.body.map(item => item.text.split(' ').length);
@@ -50,17 +50,14 @@ export default function Post({ post }: PostProps) {
     return total;
   }, 0);
 
-  //console.log(totalWords)
+  //console.log(countWords)
 
 
-  const readTime = Math.ceil(totalWords / 200);
+  const timeRead = Math.ceil(countWords / 200);
 
   const formatedDate = format(
-    new Date(post.first_publication_date),
-    'dd MMM yyyy',
-    {
-      locale: ptBR,
-    }
+    new Date(post.first_publication_date), 'dd MMM yyyy',
+    { locale: ptBR, }
   );
 
 
@@ -86,7 +83,7 @@ export default function Post({ post }: PostProps) {
 
               <li>
                 <FiClock />
-                {`${readTime} min`}
+                {`${timeRead} min`}
 
               </li>
             </ul>

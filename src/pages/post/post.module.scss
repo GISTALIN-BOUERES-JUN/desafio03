@@ -7,15 +7,15 @@
   
   .post {
     h2{
-      font-size:2.25rem;
+      font-size:2rem;
       color:var(--heading);
       margin: 3rem 0;
     }
   
     p, span, a, ul{
-      font-size:1.125rem;
+      font-size:1rem;
       line-height: 1.8;
-      margin: 1.8rem 0;
+      margin: 2rem 0;
     }
   
     a {
@@ -52,53 +52,18 @@
   
       & li {
         margin:0;
-        font-size:0.875rem;
+        font-size:1rem;
   
         & svg {
           margin-right: 0.5rem;
         }
   
         & + li {
-          margin-left: 1.625rem;
+          margin-left: 1.5rem;
         }
       }
     }
   
-    > span {
-      margin-top: 1rem;
-      display:block;
-      font-style: italic;
-      font-size: 0.875rem;
-      color:var(--info)
-    }
-  
   }
   
-  .navigation {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-top: 1px solid var(--border);
-  
-    h3{
-      font-size:1.125rem;
-      font-weight: 400;
-      color:var(--heading);
-      margin-bottom:0.5rem;
-    }
-  
-    a {
-      color:var(--highlight);
-      font-weight:600;
-    }
-  
-    div {
-      padding-top: 3rem;
-    }
-  
-    div + div{
-      text-align: right;
-  
-    }
-  }
   
